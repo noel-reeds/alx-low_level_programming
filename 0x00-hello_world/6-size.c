@@ -5,6 +5,7 @@
  * Return - Returns the sizes of various types of data types.
  */
 int main(void)
+
 	int i;
 	char b;
 	long int c;

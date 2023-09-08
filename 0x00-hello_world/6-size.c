@@ -1,4 +1,5 @@
 #include <stadio.h>
+#include <stadio.h>
 /**
  * Main - The entry point of a C program.
  *

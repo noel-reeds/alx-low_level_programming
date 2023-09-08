@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
- * This is a C program.
+ * Program: This is a C program.
  *
  * The program prints a string.
  *
- * Main is the entry point into the program
+ * Main: The entry point into the program
  *
- * Program returns 0
+ * Return: Returns zero of main.
  *
  */
 int main(void)

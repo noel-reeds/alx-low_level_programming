@@ -9,7 +9,7 @@ int main(void)
 	char b;
 	long int c;
 	long long int d;
-	float d;
+	float f;
 {
 	puts("Size of a int: %lu byte(s)", sizeof(a));
 	puts("Size of a char: %lu byte(s)", sizeof(b));

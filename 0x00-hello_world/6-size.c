@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Main - The entry point of a C program.
+ * main - entry point of a C program.
  *
- * Return - Returns the sizes of various types of data types.
+ * Return - Returns 0 for success..
  */
 int main(void)
 {

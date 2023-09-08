@@ -4,7 +4,7 @@
  *
  * The program prints a string.
  *
- * Main: The entry point into the program
+ * Main: Entry point of a C program..
  *
  * Return: Returns zero of main.
  *

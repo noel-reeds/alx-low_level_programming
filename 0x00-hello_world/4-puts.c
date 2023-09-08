@@ -4,6 +4,10 @@
  *
  * The program prints a string.
  *
+ * Main is the entry point into the program
+ *
+ * Program returns 0
+ *
  */
 int main(void)
 {

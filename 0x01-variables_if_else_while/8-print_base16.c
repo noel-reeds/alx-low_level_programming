@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-* Main: Entry point of a C program.
+* main - entry point of a C program.
 *
-*Return: Return o for successful execution.
+*Return: Return o for succes.
 */
 int main(void)
 {
@@ -11,12 +11,12 @@ int main(void)
 
 	ch = 'a';
 	cha = 48;
-	while (ch <= 'f')
+	while (cha <= 57)
 	{
 		putchar(ch);
 		ch++;
 	}
-	while (cha <= 57)
+	while (ch <= 'f')
 	{
 		putchar(cha);
 		cha++;

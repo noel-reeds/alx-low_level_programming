@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * Main - Entry point of any C program.
+ * main - entry point of any C program.
  *
  * Return: Program returns 1 for success.
  */

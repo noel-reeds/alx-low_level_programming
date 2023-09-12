@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*  _islower = entry point into the program.
+* _islower = entry point into the program.
 *
-* Return: Return 1 for lower case and 0 for uppercase.
+*Return: Return 1 for lower case and 0 for uppercase.
 *
 */
 int _islower(int c)

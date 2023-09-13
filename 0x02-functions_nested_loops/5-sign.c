@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 * print_sign - entry point of a c program.
-*
-*Return: 
+*@c: The character to print
+*Return:
 *
 */
 int print_sign(int n)

@@ -2,9 +2,9 @@
 /**
 * print_sign - entry point of a c program.
 *
-*@c: The character to print
-*
 * Return: Always 0
+*
+*@c: The character to print
 */
 int print_sign(int n)
 {

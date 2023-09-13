@@ -4,7 +4,7 @@
 *
 * Return: Always 0
 *
-*@c: The character to print
+*nc: The character to print
 */
 int print_sign(int n)
 {

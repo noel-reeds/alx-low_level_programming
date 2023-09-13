@@ -4,22 +4,19 @@
 *
 *@d1: The character to print
 *
-*Return: Return 0 always.
+*Return: Return d2.
 */
 int print_last_digit(int d1)
 {
-	int d2 = 0;
+	int d2;
 
-	d1 = d2 % 10;
-	if (d1 < 0)
-	{
-		int d3 = -d1;
+	d2 = d1 % 10;
 
-		return (d3);
-	}
-	else if (d1 > 0)
-	{
-		return (d1);
-	}
-	return (0);
+	if (d2 < 0)
+
+		d2 *= -1;
+
+	_putchar(d2 + '0');
+
+	return (d2);
 }

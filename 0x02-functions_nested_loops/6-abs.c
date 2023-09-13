@@ -13,6 +13,7 @@ int _abs(int m)
 		int n;
 
 		n = -m;
+		return (n);
 	}
 	else
 	{

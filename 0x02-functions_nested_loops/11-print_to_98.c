@@ -3,6 +3,8 @@
 /**
 * print_to_98 - prints natural numbers to 98.
 *
+*@n: The parameter to print first.
+*
 *Return: Returns void.
 *
 */

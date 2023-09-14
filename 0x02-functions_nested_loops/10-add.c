@@ -1,10 +1,12 @@
 #include "main.h"
 /**
+* add - takes two integer parameter n and m.
 *
+*@n: The character to add
 *
+*@m: The character to add
 *
-*
-*
+* Return: Returns the result of addition.
 */
 int add(int n, int m)
 {
@@ -12,5 +14,5 @@ int add(int n, int m)
 
 	res = n + m;
 	_putchar(res % 10);
-	return(res);
+	return (res);
 }

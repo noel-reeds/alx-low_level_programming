@@ -1,23 +1,17 @@
 #include "main.h"
 /**
+* _isupper - entry point to print uppercase.
 *
+*@c: The parameter to print.
 *
-*
-*
-*
+* Return: Always returns 0 for success.
 */
 int _isupper(int c)
 {
-	if ( )
+	if (c >= 'A' && c <= 'Z')
 	{
-		c = 'a';
-		_putchar(0 + '0');
+		return (1);
 	}
 	else
-	{
-		c = 'A';
-		_putchar(1 + '0');
-	}
-	_putchar('\n');
-	return (0);
+		return (0);
 }

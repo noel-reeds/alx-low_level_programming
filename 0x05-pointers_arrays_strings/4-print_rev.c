@@ -29,10 +29,9 @@ void print_rev(char *s)
 	int max;
 
 	max = _strlen(s);
-	for (index = max; index >= 0; index--)
+	for (index = max - 1; index >= 0; index--)
 	{
-		_putchar(s[index]);
+	_putchar(s[index]);
 	}
-	_putchar('\0');
 	_putchar('\n');
 }

@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _puts - entry point of a C program.
+* puts_half - prints second half a string
 *
 *@str: parameter.
 *
@@ -12,7 +12,7 @@ void puts_half(char *str)
 	int max_str;
 	int n;
 
-	max_str = _strlen(str) -1;
+	max_str = _strlen(str) - 1;
 	if (max_str % 2 != 0)
 	{
 		n = (max_str - 1) / 2;
@@ -33,7 +33,7 @@ void puts_half(char *str)
 /**
   * _strlen - entry point of a program.
   *
-  *@s: parameter.
+  *@arr: parameter.
   *
   *Return: returns count.
   */

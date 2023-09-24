@@ -5,12 +5,12 @@
   *
   *@s: string to be converted to integer.
   *
-  *Return: Always 0.
+  *Return: The converted integer value.
   */
 int _atoi(char *s)
 {
 	int len;
-	int elem;
+	unsigned int elem;
 	int index;
 	int neg;
 

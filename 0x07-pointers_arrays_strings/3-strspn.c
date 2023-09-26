@@ -13,9 +13,9 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int index;
 	unsigned int elem;
-
 	unsigned int len_s = strlen(s);
 	unsigned int len_a = strlen(accept);
+
 	for (index = 0; index < len_s; index++)
 	{
 		if (len_a != 0)

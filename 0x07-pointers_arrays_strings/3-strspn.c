@@ -15,6 +15,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int elem;
 	unsigned int len_s = strlen(s);
 	unsigned int len_a = strlen(accept);
+	unsigned int count = 0;
 
 	for (index = 0; index < len_s; index++)
 	{
@@ -24,7 +25,8 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				if (s[index] == accept[elem])
 				{
-					elem++;
+					break;
+					count++;
 				}
 			}
 		}

@@ -14,15 +14,22 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int index;
 	unsigned int elem;
 
-	for (index = 0; index < strlen(s); index++)
+	unsigned int len_s = strlen(s);
+	unsigned int len_a = strlen(accept);
+	for (index = 0; index < len_s; index++)
 	{
-		for (elem = 0; elem <= strlen(accept); elem++)
+		if (len_a != 0)
 		{
-			if (s[index] == accept[elem])
+			for (elem = 0; elem <= len_a; elem++)
 			{
-				elem++;
+				if (s[index] == accept[elem])
+				{
+					elem++;
+				}
 			}
 		}
+		else
+			break;
 	}
 	return (elem);
 }

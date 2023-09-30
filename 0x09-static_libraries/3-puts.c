@@ -1,11 +1,13 @@
 #include "main.h"
+
 /**
-* _puts - entry point of a C program.
-*
-*@str: parameter.
-*
-*Return: returns void.
-*/
+  * _puts - entry point of a C program.
+  *
+  *@str: parameter.
+  *
+  *Return: returns void.
+ */
+
 void _puts(char *str)
 {
 	int index;

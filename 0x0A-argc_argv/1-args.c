@@ -9,10 +9,9 @@
   *
   *Return: Always 0
   */
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
-	char __attribute__ ((unused)) myargv = **argv;
-
+	char* __attribute__ ((unused)) myargv = *argv;
 	if (argc > 0)
 	{
 		printf("%d\n", argc - 1);

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
   * main - entry point of a C program.
   *
@@ -46,11 +45,10 @@ int main(int argc, char *argv[])
 		}
 		ncoins += num;
 		printf("%d\n", ncoins);
-		return (0);
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
-	}
+	} return (0);
 }

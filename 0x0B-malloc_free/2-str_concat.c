@@ -12,21 +12,23 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-	char *combined;
+	char *combined = "";
 	int len;
 	int len2;
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		return (NULL);
+		return (combined);
 	}
 	else if (s1 == NULL)
 	{
-		return (s2);
+		strcpy(combined, s2);
+		return (combined);
 	}
 	else if (s2 == NULL)
 	{
-		return (s1);
+		strcpy(combined, s1);
+		return (combined);
 	}
 	else
 	{

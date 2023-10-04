@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+
 /**
   * _strdup - duplicates a str.
   *
@@ -8,18 +9,38 @@
   *
   *Return: Always 0.
   */
+
 char *_strdup(char *str)
 {
-	size_t len = strlen(str);
-	char *dup_str = malloc(sizeof(len + 1));
+	int len = strlen(str);
+	char *dup_str = malloc((sizeof(char) * len) + 1);
 
-	if (dup_str != NULL)
+	if (dup_str == NULL)
 	{
 		return (NULL);
 	}
-	else
+		return (_strcpy(dup_str, str));
+}
+
+/**
+  * _strcpy - copy a str.
+  *
+  *@dest: copied str.
+  *
+  *@src: str to copy.
+  *
+  *Return: Return dest.
+  */
+char *_strcpy(char *dest, char *src)
+{
+	char *dest_init = dest;
+
+	while (*src != '\0')
 	{
-		dup_str = _strdup(str);
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	return (dup_str);
+	*dest = '\0';
+	return (dest_init);
 }

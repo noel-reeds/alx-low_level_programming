@@ -18,6 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
+		combined = malloc(0);
 		return (combined);
 	}
 	else if (s1 == NULL)
@@ -36,16 +37,16 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-	len = strlen(s1);
-	len2 = strlen(s2);
-	combined = malloc((sizeof(char) * (len + len2)) + 1);
-	if (combined != NULL)
-	{
-		strcpy(combined, s1);
-		strcat(combined, s2);
-		return (combined);
-	}
-	else
-		return (NULL);
+		len = strlen(s1);
+		len2 = strlen(s2);
+		combined = malloc((sizeof(char) * (len + len2)) + 1);
+		if (combined != NULL)
+		{
+			strcpy(combined, s1);
+			strcat(combined, s2);
+			return (combined);
+		}
+		else
+			return (NULL);
 	}
 }

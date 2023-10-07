@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -8,14 +8,20 @@
   *
   *@size: size of each block.
   *
+  *Return: Return pointer to memory.
   */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *ptr;
+	void *ptr;
 
-	ptr = calloc(nmemb, size);
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 	{
-
+		return (NULL);
 	}
+	return (ptr);
 }

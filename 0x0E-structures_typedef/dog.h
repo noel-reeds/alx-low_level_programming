@@ -18,7 +18,15 @@ struct dog
 
 };
 /**
+  * init_dog - initializes variable struct dog.
   *
+  *@d:
+  *
+  *@name:
+  *
+  *@age:
+  *
+  *@owner:
   *
   */
 void init_dog(struct dog *d, char *name, float age, char *owner);

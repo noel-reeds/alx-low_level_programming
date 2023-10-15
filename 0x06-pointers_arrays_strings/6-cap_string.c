@@ -16,11 +16,11 @@ char *cap_string(char *str)
 	{
 		for (index2 = 0; format[index2] != '\0'; index2++)
 		{
-			if (str[index] == format[index2] &&
-					(str[index + 1] >= 'a' && str[index + 1] <= 'z'))
-			{
-				str[index + 1] = str[index + 1] - 32;
-			}
+			if (str[index - 1] == format[index2] || index == 0)
+				if (str[index] >= 'a' && str[index] <= 'z')
+				{
+					str[index] = str[index] - 32;
+				}
 		}
 	}
 	return (str);

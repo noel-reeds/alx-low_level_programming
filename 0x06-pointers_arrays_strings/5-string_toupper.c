@@ -3,6 +3,8 @@
 /**
   * string_toupper - converts a str from lowercase to uppercase.
   *
+  *@str: str to covert to upper case.
+  *
   *Return: Return a pointer to a str with uppercase.
   */
 char *string_toupper(char *str)

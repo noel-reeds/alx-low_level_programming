@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * free_listint - frees memory.
+  * free_listint2 - frees memory.
   *
   *@head: first node of a linked list.
   *

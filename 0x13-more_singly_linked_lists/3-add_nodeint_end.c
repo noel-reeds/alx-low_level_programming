@@ -4,6 +4,8 @@
   *
   *@head: first node of the linked list.
   *
+  *@n: integer value or data to be added.
+  *
   *Return: Always a pointer to the new node.
   */
 listint_t *add_nodeint_end(listint_t **head, const int n)

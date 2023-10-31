@@ -8,7 +8,7 @@
   *
   *Return: Number of bytes read.
   */
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
 	int fd, num, nbyte;
 	char *buf;
@@ -30,12 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	fd = open(filename, O_WRONLY | O_TRUNC);
-	if (fd == -1)
-	{
-		free(buf);
-		return (0);
-	}
 	num = write(fd, buf, nbyte);
 	if (num == -1)
 	{
@@ -43,6 +37,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	close(fd);
-	free(buf);
 	return (num);
 }

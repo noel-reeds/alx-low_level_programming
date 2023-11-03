@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	while ((temp >>= 1) > 0)
 		var++;
-	while(var >= 0)
+	while (var >= 0)
 	{
 		if ((n >> var) & 1)
 			_putchar('1');

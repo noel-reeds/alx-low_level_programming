@@ -4,7 +4,7 @@
   *
   *Return: Returns either little or big endian.
   */
-int get_endianness()
+int get_endianness(void)
 {
 	unsigned int m = 1;
 	char *b = (char *)&m;

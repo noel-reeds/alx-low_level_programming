@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-  * read_textfile - reads a text file.
+  * create_file - reads a text file.
   *
-  *@filename: file to be read.
+  *@filename: file to be created.
   *
-  *@letters: number of bytes ato be read.
+  *@text_content: str to write to filename.
   *
   *Return: Number of bytes read.
   */

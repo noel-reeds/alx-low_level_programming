@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * create_file - reads a text file.
+  * create_file - creates a file.
   *
   *@filename: file to be created.
   *
@@ -10,13 +10,19 @@
   */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, num, nbyte;
+	int fd, nbyte;
 	char *buf;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_WRONLY);
+	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 	if (fd == -1)
-		return (0);
+		return (-1);
 	if (text_content == NULL)
+		touch filename;
+	nbyte = write(fd, buf, *text_content);
+	if (nbyte == -1)
+		return (-1);
+	close(fd);
+	return (nbyte);
 }

@@ -18,8 +18,6 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 	if (fd == -1)
 		return (-1);
-	if (text_content == NULL)
-		touch filename;
 	nbyte = write(fd, buf, *text_content);
 	if (nbyte == -1)
 		return (-1);

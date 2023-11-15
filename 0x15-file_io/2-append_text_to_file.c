@@ -1,6 +1,6 @@
-#include "main.h"
+i#include "main.h"
 /**
-  * append_text_to__file - appends text to a file.
+  * append_text_to_file - appends text to a file.
   *
   *@filename: file to append to.
   *

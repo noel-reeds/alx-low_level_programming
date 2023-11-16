@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	}
 	while ((num = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		if (write(fd, buf, num) != num)
+		if ((write(fd, buf, num) != num) || (num == -1))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
 			exit(99);

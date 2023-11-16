@@ -10,7 +10,6 @@
   */
 int main(int argc, char *argv[])
 {
-	int fd, fd2, m, n, nbyte, num;
 	char buf[BUF_SIZE];
 
 	if (argc != 3)
@@ -47,6 +46,9 @@ int main(int argc, char *argv[])
 	m = close(fd);
 	n = close(fd2);
 	if (m == -1 || n == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d %d\n", m, n);
+		exit(100);
+	}
 	return (0);
 }

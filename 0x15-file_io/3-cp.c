@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 		if (write(fd, buf, nbyte) != nbyte)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
-			close(fd);
-			close(fd2);
 			exit(99);
 		}
-	m = close(fd);
-	n = close(fd2);
+	if (nbyte == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+		exit(99);
 	if (m == -1 || n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");

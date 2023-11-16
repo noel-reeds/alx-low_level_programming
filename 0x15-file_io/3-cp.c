@@ -10,7 +10,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int fd, fd2, m, n, num;
+	int fd, fd2, m, n, nbyte;
 	char buf[BUF_SIZE];
 
 	if (argc != 3)
@@ -30,14 +30,14 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((num = read(fd2, buf, BUF_SIZE)) > 0)
+	while ((nbyte = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		if (num == -1)
+		if (nbyte == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-		write(fd, buf, num);
+		write(fd, buf, nbyte);
 	}
 	m = close(fd);
 	n = close(fd2);
@@ -46,5 +46,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
-	return (num);
+	return (nbyte);
 }

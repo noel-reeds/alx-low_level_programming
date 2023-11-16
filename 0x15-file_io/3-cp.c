@@ -10,7 +10,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int fd, fd2, m, n, num, nbyte;
+	int fd, fd2, m, n, num;
 	char buf[BUF_SIZE];
 
 	if (argc != 3)
@@ -32,7 +32,11 @@ int main(int argc, char *argv[])
 	}
 	while ((num = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		nbyte = write(fd, buf, num);
+		if (write(fd, buf, num) != num)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+			exit(99);
+		}
 	}
 	m = close(fd);
 	n = close(fd2);
@@ -41,5 +45,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
-	return (nbyte);
+	return (num);
 }

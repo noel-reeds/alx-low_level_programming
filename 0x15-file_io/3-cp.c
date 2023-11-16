@@ -32,17 +32,17 @@ int main(int argc, char *argv[])
 	}
 	while ((nbyte = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		if (nbyte == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-			exit(99);
-		}
 		num = write(fd, buf, nbyte);
-		if (num == -1)
+		if (num == -1 || num != nbyte)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			 exit(99);
+			exit(99);
 		}
+	}
+	if (nbyte == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	m = close(fd);
 	n = close(fd2);
@@ -51,5 +51,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d %d\n", m, n);
 		exit(100);
 	}
-	return (nbyte);
+	return (0);
 }

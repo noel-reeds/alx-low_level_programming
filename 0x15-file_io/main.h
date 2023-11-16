@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int fd, fd2, m, n, nbyte, num;
 #define BUF_SIZE 1024
 #include <string.h>
 #include <sys/stat.h>

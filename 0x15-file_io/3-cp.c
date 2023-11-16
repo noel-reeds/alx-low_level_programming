@@ -32,11 +32,6 @@ int main(int argc, char *argv[])
 	}
 	while ((nbyte = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		if (nbyte == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
 		num = write(fd, buf, nbyte);
 		if (num == -1)
 		{

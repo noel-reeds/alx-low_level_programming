@@ -10,7 +10,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int fd, fd2, m, n, nbyte;
+	int fd, fd2, m, n, nbyte, num;
 	char buf[BUF_SIZE];
 
 	if (argc != 3)
@@ -30,12 +30,16 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
 		exit(99);
 	}
-	while ((nbyte = read(fd2, buf, BUF_SIZE)) > 0)
+	while ((num = read(fd2, buf, BUF_SIZE)) > 0)
 	{
-		if (write(fd, buf, nbyte) != nbyte)
+		if (num != -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
-			exit(99);
+			nbyte = write(fd, buf, num);
+			if (nbyte == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+				exit(99);
+			}
 		}
 	}
 	m = close(fd);

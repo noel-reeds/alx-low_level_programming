@@ -15,7 +15,7 @@ int _readelf(int args, char *argv[])
 
 	if (args != 2)
 	{
-		dprintf(stderr, "Error: Not an ELF file\n");
+		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 		exit(98);
 	}
 }

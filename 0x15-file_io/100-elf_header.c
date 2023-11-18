@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _readelf - reads and displays contents of a ELF header.
+ * main - reads and displays contents of a ELF header.
  *
  *@args: number of arguments.
  *

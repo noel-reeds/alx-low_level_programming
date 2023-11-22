@@ -1,11 +1,18 @@
 #include "dog.h"
+#include <stdlib.h>
+
 /**
   * free_dog - frees memory after execution.
   *
-  *@d: pointer to new_dog.
+  *@d: pointer to dog d.
   *
   */
 void free_dog(dog_t *d)
 {
-	free(dot_t);
+	if (d != NULL)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }

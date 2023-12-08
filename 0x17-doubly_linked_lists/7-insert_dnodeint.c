@@ -35,8 +35,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 	}
 	if (idx > num)
-		free(insertnoode);
+	{
+		free(insertnode);
 		return (NULL);
+	}
 	temp = *h;
 	while (i < idx - 1)
 	{

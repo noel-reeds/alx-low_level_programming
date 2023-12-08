@@ -14,16 +14,24 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp = *h; /*Iternode - node to iterate with/ traverse*/
 	dlistint_t *insertnode = malloc(sizeof(dlistint_t));
-	unsigned int res = 0;
+	unsigned int i = 0, num = 0;
+
 
 	if (insertnode == NULL)
 		return (NULL);
 	if (*h == NULL)
 		return (NULL);
-	while (res < idx)
+	while (*h != NULL)
+	{
+		num++;
+		(*h) = (*h)->next;
+	}
+	if (idx > num)
+		return (NULL);
+	while (i < idx)
 	{
 		temp = temp->next;
-		res++;
+		i++;
 	}
 	insertnode->n = n;
 	insertnode->prev = temp->next->prev;

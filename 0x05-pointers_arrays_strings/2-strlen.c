@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * _strlen - entry point of a program.
+  * _strlen - sorts the len of a string.
   *
   *@s: parameter.
   *

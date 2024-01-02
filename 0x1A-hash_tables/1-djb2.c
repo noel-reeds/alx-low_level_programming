@@ -9,12 +9,12 @@
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	int m;
-	unsigned long index;
+	unsigned long hash_value = 5381;
 
 	while ((m = *str++))
 	{
 		if (str[m])
-			index = ((index * 33) + str[m]);
+			hash_value = ((hash_value * 33) + str[m]);
 	}
-	return (index);
+	return (hash_value);
 }

@@ -1,1 +1,4 @@
-How to create and use Hash functions, Hash functions over Arrays..
+Into. to hash tables and their structure..  
+How to create hash tables..  
+Hash tables operations..insertion, deletion and searching..  
+Hashing algos..  

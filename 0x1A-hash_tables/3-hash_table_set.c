@@ -17,6 +17,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *Node = malloc(sizeof(hash_node_t));
 	hash_node_t *head_ptr = malloc(sizeof(hash_node_t));
 
+	if (!ht)
+		return (0);
 	if (!Node)
 		return (0);
 	Node->key = (char *) malloc(strlen(key) + 1);

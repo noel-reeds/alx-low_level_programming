@@ -19,15 +19,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!Node)
 		return (0);
+	Node->key = (char *) malloc(strlen(key) + 1);
+	Node->value = (char *) malloc(strlen(value) + 1);
+
 	strcpy(Node->key, key);
 	strcpy(Node->value, value);
 	index = key_index((const unsigned char *)key, ht->size);
-	if (index)
+	if (ht->array[index])
 	{
 		if (strcmp(ht->array[index]->key, Node->key))
 		{
 			if (head_ptr)
 			{
+				printf("..hello\n");
 				temp = head_ptr;
 				while (temp->next)
 					temp = temp->next;

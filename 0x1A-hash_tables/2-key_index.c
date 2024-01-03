@@ -10,9 +10,9 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int index, m;
+	unsigned long int index, hash;
 
-	for (m = 0; m < size; m++)
-		index = hash_djb2(key);
+	hash = hash_djb2(key);
+	index = hash % size; /*..creates an index withing the array size.*/
 	return (index);
 }

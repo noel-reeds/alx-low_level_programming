@@ -1,1 +1,8 @@
-This is a README file on introduction to C Programming
+Introduction to C Programming  
+Control Flow statements  
+Data structures and Algorithms(DSA)  
+Recursion  
+Libraries  
+Bit Manipulation  
+Pointers  
+Variadic Functions...

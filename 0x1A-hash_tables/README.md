@@ -11,3 +11,4 @@ Hashing algos..
 [Hash Table](https://en.wikipedia.org/wiki/Hash_table).  
 [All about Hash Tables](https://www.digitalocean.com/community/tutorials/hash-table-in-c-plus-plus).  
 [Why hash tables and not arrays](https://www.digitalocean.com/community/tutorials/hash-table-in-c-plus-plus).
+[amortized time complexity for hash tables](https://en.wikipedia.org/wiki/Amortized_analysis).

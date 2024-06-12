@@ -65,7 +65,7 @@ typedef struct hash_table_s
 } hash_table_t;
 
 /*----PROTOTYPES----*/
-ht_item *create_ht_item(char *key, char *value)
+ht_item *create_ht_item(char *key, char *value);
 HashTable *create_table(int size);
 unsigned long hash_function(char *str);
 void print_table(HashTable *table);

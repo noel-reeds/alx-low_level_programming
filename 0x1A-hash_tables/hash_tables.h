@@ -1,13 +1,28 @@
 #ifndef HASH_TABLES_H
 #define HASH_TABLES_H
+/*-----MACROS--------*/
+#define CAPACITY 50000 // size of hash table.
 
 /*----HEADERFILES----*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-
 /*----STRUCTS----*/
+// define the hash table item.
+typedef struct ht_item
+{
+	char* key;
+	char* value;
+}ht_item;
+
+// define the HashTable
+typedef struct HashTable
+{
+	ht_item** items;
+	int size;
+	int count;
+}HashTable;
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -39,6 +54,13 @@ typedef struct hash_table_s
 } hash_table_t;
 
 /*----PROTOTYPES----*/
+ht_item* create_ht_item(char* key, char* value)
+HashTable* create_table(int size)
+unsigned long hash_function(char* str);
+void print_table(HashTable* table);
+void free_table(HashTable* table)
+void free_item(ht_item* item)
+
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);

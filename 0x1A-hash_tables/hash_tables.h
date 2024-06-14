@@ -22,15 +22,30 @@ typedef struct ht_item
 } ht_item;
 
 /**
+ * struct LinkedList - defines a linkedlist structure
+ *
+ *@item: a hash table item.
+ *
+ *@next: next node pointer in a linkedlist.
+ */
+typedef struct LinkedList
+{
+	ht_item *item;
+	struct LinkedList *next;
+} LinkedList;
+
+/**
  * struct HashTable - hash table structure.
  *
  *@items: double pointer to hash table items
+ *@overflow_buckets: contains collision chain
  *@size: size of hash table
  *@count: number of items in hash table
  */
 typedef struct HashTable
 {
 	ht_item **items;
+	LinkedList **overflow_buckets;
 	int size;
 	int count;
 } HashTable;
@@ -71,6 +86,10 @@ unsigned long hash_function(char *str);
 void print_table(HashTable *table);
 void free_table(HashTable *table);
 void free_item(ht_item *item);
+void ht_insert(HashTable *table, char *key, char *value);
+LinkedList *allocate_list(void);
+LinkedList *linkedlist_insert(LinkedList *list, ht_item *item);
+void free_linkedlist(LinkedList *list);
 
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);

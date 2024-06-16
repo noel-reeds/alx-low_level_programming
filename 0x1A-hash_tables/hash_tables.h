@@ -76,6 +76,7 @@ typedef struct hash_node_s
 typedef struct hash_table_s
 {
 	unsigned long int size;
+	hash_node_t **overflow_buckets;
 	hash_node_t **array;
 } hash_table_t;
 
@@ -90,7 +91,8 @@ void ht_insert(HashTable *table, char *key, char *value);
 LinkedList *allocate_list(void);
 LinkedList *linkedlist_insert(LinkedList *list, ht_item *item);
 void free_linkedlist(LinkedList *list);
-
+void handle_collision(hash_table_t *ht, unsigned long index, hash_node_t *node);
+hash_node_t *create_hash_node(char *key, char *value);
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
@@ -98,4 +100,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
+
 #endif /*---HASH_TABLES_H---*/

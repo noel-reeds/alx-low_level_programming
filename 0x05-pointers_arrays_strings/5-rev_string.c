@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _strlen - returns length of string.
 *
@@ -6,17 +7,18 @@
 *
 *Return: Always void.
 */
-int _strlen(char *arr)
+int _strlen(char *str)
 {
-	int index;
-	int count;
+	int m, _strlen;
 
-	count = 0;
-	for (index = 0; arr[index] != '\0'; index++)
+	_strlen = 0;
+	m = 0;
+	while (*(str + m) != '\0')
 	{
-		count++;
+		_strlen += 1;
+		m++;
 	}
-	return (count);
+	return (_strlen);
 }
 /**
 * rev_string - reverses string.
@@ -25,20 +27,18 @@ int _strlen(char *arr)
 */
 void rev_string(char *s)
 {
-	int index;
-	char rev_str[500];
-	int rev;
+	int m, n;
+	char tmp;
 
-	rev = 0;
-	for (index = _strlen(s) - 1; index >= 0; index--)
+	m = 0;
+	n = _strlen(s) - 1;
+	while (m < n)
 	{
-		rev_str[rev] = s[index];
-		rev++;
+		tmp = *(s + m);
+		*(s + m) = *(s + n);
+		*(s + n) = tmp;
+		m++;
+		n--;
 	}
-	rev = 0;
-	for (index = 0; index <= _strlen(s) - 1; index++)
-	{
-		s[index] = rev_str[rev];
-		rev++;
-	}
+	return;
 }

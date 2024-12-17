@@ -7,52 +7,26 @@
   *
   *Return: The converted integer value.
   */
-int _atoi(char *s)
-{
-	int len;
-	unsigned int elem;
-	int index;
-	int neg;
+int _atoi(char *s) {
+    int m, _dec, _n;
 
-	elem = 0;
-	neg = 0;
-	len = _strlen(s);
-	for (index = 0; index <= len; index++)
-	{
-		if (s[index] >= '0' && s[index] <= '9')
-		{
-			elem *= 10;
-			elem = elem + (s[index] - '0');
-			if (!(s[index + 1] >= '0' && s[index + 1] <= '9'))
-			{
-				break;
-			}
-		}
-		if (s[index] == '-')
-		{
-		neg++;
-		}
-	}
-	if (neg % 2 != 0)
-	{
-		elem = -elem;
-	}
-	return (elem);
-}
-/**
-  * _strlen - entry point of a program.
-  *
-  *@s: parameter.
-  *
-  *Return: returns count.
-  */
-int _strlen(char *s)
-{
-	int index;
-	int count = 0;
-
-	for (index = 0; s[index] != '\0'; index++)
-		count++;
-
-	return (count);
+    _n = m = 0;
+    _dec = 0;
+    while (*(s + m) != '\0') {
+        if (*(s + m) >= '0' && *(s + m) <= '9') {
+            _dec *= 10;
+            _dec += *(s + m) - 48;
+            if (!(*(s + m) >= 48 && *(s + m) <= 57)) {
+                break;
+            }
+        }
+        if (*(s + m) == 45) {
+            _n += 1;
+        }
+        m++;
+    }
+    if (_n % 2 != 0) {
+        _dec = -_dec;
+    }
+    return (_dec);
 }

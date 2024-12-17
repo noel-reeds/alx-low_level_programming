@@ -8,7 +8,7 @@
   *Return: The converted integer value.
   */
 int _atoi(char *s) {
-    int m, _dec, _n;
+    int m, _dec, _n, nptr;
 
     _n = m = 0;
     _dec = 0;
@@ -16,7 +16,8 @@ int _atoi(char *s) {
         if (*(s + m) >= '0' && *(s + m) <= '9') {
             _dec *= 10;
             _dec += *(s + m) - 48;
-            if (!(*(s + m) >= 48 && *(s + m) <= 57)) {
+			nptr = m + 1;
+            if (!(*(s + nptr) >= 48 && *(s + nptr) <= 57)) {
                 break;
             }
         }

@@ -10,6 +10,7 @@ int main(void)
 {
 	int psswd, r_num;
 
+	/* intialize psswd with decimal eq of 0xad4 */
 	psswd = 2772;
 	srand(time(NULL));
 	while (psswd > 119)
